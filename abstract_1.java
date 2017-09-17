@@ -1,37 +1,42 @@
-package demo;
-import java.util.Scanner;
-public class Aakash {
-	    public static void main(String[] args) 
-	    {
-	        int n;
-	        String temp;
-	        Scanner s = new Scanner(System.in);
-	        System.out.print("Enter number of names you want to enter:");
-	        n = s.nextInt();
-	        String names[] = new String[n];
-	        Scanner s1 = new Scanner(System.in);
-	        System.out.println("Enter all the names:");
-	        for(int i = 0; i < n; i++)
-	        {
-	            names[i] = s1.nextLine();
-	        }
-	        for (int i = 0; i < n; i++) 
-	        {
-	            for (int j = i + 1; j < n; j++) 
-	            {
-	                if (names[i].compareTo(names[j])>0) 
-	                {
-	                    temp = names[i];
-	                    names[i] = names[j];
-	                    names[j] = temp;
-	                }
-	            }
-	        }
-	        System.out.print("Names in Sorted Order:");
-	        for (int i = 0; i < n - 1; i++) 
-	        {
-	            System.out.print(names[i] + ",");
-	        }
-	        System.out.print(names[n - 1]);
-	    }
+  
+package newpackage;
+abstract class Shape 
+{
+	public abstract void number_of_sides();
+	
+}
+class Trapezoid extends Shape
+		{
+public void number_of_sides()
+	{
+	System.out.println("Trapezoid : 4");
 	}
+		}
+class Triangle extends Shape
+
+{	public void number_of_sides()
+{
+	System.out.println("Triangle : 3");
+}}
+class Hexagon extends Shape
+{
+	public void number_of_sides()
+{
+	System.out.println("Hexagon: 6");
+}}
+ class Demo {
+public static void main (String args[])
+{	
+	Trapezoid tz=new Trapezoid();
+
+	Triangle t=new Triangle();
+	Hexagon h1=new Hexagon();
+	tz.number_of_sides();
+	t.number_of_sides();
+	h1.number_of_sides();
+	
+}
+}
+
+	
+
