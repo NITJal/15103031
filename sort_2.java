@@ -1,3 +1,4 @@
+package newpackage;
 import java.util.*;
 
 public class SortingAsec {
